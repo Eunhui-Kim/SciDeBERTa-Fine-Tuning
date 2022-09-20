@@ -7,7 +7,7 @@ The paper is ![SciDeBERTa:  Learning DeBERTa for Science and Technology Document
 For continual learning of PLM, you could use two kinds of methods.
 1. you could use hugging face library. - Pretrain Transformers Models in PyTorch Using Hugging Face Transformers (https://www.topbots.com/pretrain-transformers-models-in-pytorch/)
 2. If you want to use deberta, you could use deberta code which is open. They also open MLM(masked langauge model) example, too.
-   ![GitHub - microsoft/DeBERTa](https://github.com/microsoft/DeBERTa)
+ (https://github.com/microsoft/DeBERTa)
 
 # introduction
 This repository is related with the paper SciDeBERTa.
