@@ -39,47 +39,44 @@ Note that this code is tested only in the environment decribed below. Mismatched
    pip install -r requirements.txt
    
 # Testing BERT model with SciERC dataset 
-   For Check Setting, you could first download SciERC dataset and test BERT model by downloading SciERC dataset.  
+  -  For Check Setting, you could first download SciERC dataset and test BERT model by downloading SciERC dataset.  
    To train a model for named entity recognition, relation extraction, and coreference resolution on the SciERC dataset:
 
-   Download the data. From the top-level folder for this repo, enter bash ./scripts/data/get_scierc.sh. 
+  -  Download the data. From the top-level folder for this repo, enter bash ./scripts/data/get_scierc.sh. 
    This will download the scierc dataset into a folder ./data/scierc
    Train the model. Enter bash scripts/train.sh scierc.
 
 # Testing SciDeBERTa model with optimizing fine-tuning option
   1) BackUp the following installed files A(initializers.py) and B(optimizer.py), 
+  
     A. $HOME/.local/lib/python3.8/site-packages/allennlp/nn/initializers.py 
+    
     B. $HOME/.local/lib/python3.8/site-packages/allennlp/training/optimizer.py
+    
   2) Substitute following files.
     A. Substitute A(initilizers.py) file with patch_code/initializers.py 
+    
       >> According to the model for Bert, Roberta, Deberta,  
          you can select initializers.py such as initializers_re1011_bert.py, initializers_re1011_roberta.py, initializers_re1011_deberta.py, respectively. 
+         
     B. Substitute B(optimizers.py) file with patch_code/optimizers.py
+    
   3) Option Setting in training config
- -  A. Task Setting : To run the "ner" only task, open scierc.jsonnet in training_config 
-                      and set loss_weights to ner: 1.0 and relation, coref, and events to 0.0.
-                      loss_weights:{
-                             ner: 1.0, 
-                             relation: 0.0,
-                             coref: 0.0,
-                             events: 0.0
-                      },
-                      Set target_task to “ner”.
-                      target_task: “ner”,
-                      Multi-task option setting is possible in the same way. Depending on the loss weight, the weight ratio of each task is different, 
-                      so the performance is different. In particular, it helps to improve ner performance when running ner and coref at the same time.
- -  B. Optimizer Setting: To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
-                      trainer +:{
-                        optimmizer +:{
-                           type: ‘radam’
-                        }
-                      },
+ -  A. Task Setting : 
+    -  To run the "ner" only task, open scierc.jsonnet in training_config 
+       and set loss_weights to ner: 1.0 and relation, coref, and events to 0.0.
+       Set target_task to “ner” such as target_task: “ner”, (refer to the file, ner_finetune_re10-11.json)
+    -  Multi-task option setting is possible in the same way. Depending on the loss weight, the weight ratio of each task is different, 
+       so the performance is different. In particular, it helps to improve ner performance when running ner and coref at the same time.
+ -  B. Optimizer Setting: 
+    -  To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
+    -  (refer to the file,  scierc_ner_radam.jsonnet)
  -  C. RUN
-       sh scripts/train.sh scierc    
+    -  sh scripts/train.sh scierc    
  
  
- You can refer our paper as follows.
- 
+ # Citation
+ ``` latex
  @article{jeong2022scideberta,
   title={SciDeBERTa: Learning DeBERTa for Science and Technology Documents and Fine-tuning Information Extraction Tasks},
   author={Jeong, Yuna and Kim, Eunhui},
@@ -87,4 +84,4 @@ Note that this code is tested only in the environment decribed below. Mismatched
   year={2022},
   publisher={IEEE}
 }
-   
+```   
