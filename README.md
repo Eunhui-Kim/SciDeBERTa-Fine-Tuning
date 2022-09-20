@@ -56,7 +56,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
          you can select initializers.py such as initializers_re1011_bert.py, initializers_re1011_roberta.py, initializers_re1011_deberta.py, respectively. 
     B. Substitute B(optimizers.py) file with patch_code/optimizers.py
   3) Option Setting in training config
-    A. Task Setting : To run the "ner" only task, open scierc.jsonnet in training_config 
+ -  A. Task Setting : To run the "ner" only task, open scierc.jsonnet in training_config 
                       and set loss_weights to ner: 1.0 and relation, coref, and events to 0.0.
                       loss_weights:{
                              ner: 1.0, 
@@ -68,13 +68,13 @@ Note that this code is tested only in the environment decribed below. Mismatched
                       target_task: “ner”,
                       Multi-task option setting is possible in the same way. Depending on the loss weight, the weight ratio of each task is different, 
                       so the performance is different. In particular, it helps to improve ner performance when running ner and coref at the same time.
-    B. Optimizer Setting: To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
+ -  B. Optimizer Setting: To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
                       trainer +:{
                         optimmizer +:{
                            type: ‘radam’
                         }
                       },
-    C. RUN
+ -  C. RUN
        sh scripts/train.sh scierc    
  
  
