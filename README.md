@@ -17,7 +17,7 @@ The main idea of optimizing fine-tuning is
  
 # our experimental Results for SciDeBERTa
 This figure shows the SciDeBERTa model performance in the metric of F1 score in SciERC & Genia DataSet.
-![performance](https://github.com/Eunhui-Kim/SciDeBERTa-Fine-Tuning/blob/main/Fig4-s.png)
+![performance](https://github.com/Eunhui-Kim/SciDeBERTa-Fine-Tunining/blob/main/Test%20Performance%20of%20SciDeBERTa.png)
 
  
 # pre-requisite
