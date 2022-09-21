@@ -1,5 +1,5 @@
 
-# SciDeBERTa-Fine-Tunining
+# SciDeBERTa Fine-Tunining
 This code is for testing SciDeBERTa PLM model usig multi-tasking framework, dygiepp.
 The paper is ![SciDeBERTa:  Learning DeBERTa for Science and Technology Documents and Fine-tuning Information Extraction Tasks] (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9791256)
 
@@ -58,6 +58,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
     - training_config/scierc_radam_st_scideberta_re9-net-1.jsonnet
     >> This example is the case which you download the configuration files into the local path.
     >> configuration files : pytorch_model.bin, config.json, tokenizer.json, vocab.json, merges.txt
+    
 # Testing SciDeBERTa model with optimizing fine-tuning option
   1) BackUp the following installed files A(initializers.py) and B(optimizer.py), 
   
