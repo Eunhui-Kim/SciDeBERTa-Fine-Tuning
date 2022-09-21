@@ -37,6 +37,8 @@ Note that this code is tested only in the environment decribed below. Mismatched
    conda create -n create dygiepp python==3.8
  - activate conda environment :
    conda activate dygiepp
+ - install <a href="https://pytorch.org/get-started/locally/">torch</a> 
+   pip3 install torch torchvision torchaudio
  - install requirements in the dygiepp local path 
    pip install -r requirements.txt
    
