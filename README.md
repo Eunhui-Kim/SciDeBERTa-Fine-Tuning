@@ -39,12 +39,14 @@ Note that this code is tested only in the environment decribed below. Mismatched
    pip install -r requirements.txt
    
 # Testing BERT model with SciERC dataset 
-  -  For Check Setting, you could first download SciERC dataset and test BERT model by downloading SciERC dataset.  
+  -  For Check Setting, you could first download SciERC dataset and test by using default BERT model.  
    To train a model for named entity recognition, relation extraction, and coreference resolution on the SciERC dataset:
 
-  -  Download the data. From the top-level folder for this repo, enter bash ./scripts/data/get_scierc.sh. 
+  -  Download the data. From the top-level folder for this repo, 
+     - enter bash ./scripts/data/get_scierc.sh. 
    This will download the scierc dataset into a folder ./data/scierc
-   Train the model. Enter bash scripts/train.sh scierc.
+  - Train the model. 
+     - enter bash scripts/train.sh scierc.
 
 # Testing SciDeBERTa model with optimizing fine-tuning option
   1) BackUp the following installed files A(initializers.py) and B(optimizer.py), 
