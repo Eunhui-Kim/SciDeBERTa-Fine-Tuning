@@ -95,9 +95,10 @@ Note that this code is tested only in the environment decribed below. Mismatched
  -  A. Task Setting : 
     -  To run the "ner" only task, open scierc.jsonnet in training_config 
        and set loss_weights to ner: 1.0 and relation, coref, and events to 0.0.
-       Set target_task to “ner” such as target_task: “ner”, (refer to the file, ner_finetune_re10-11.json)
+       Set target_task to “ner” such as target_task: “ner”. (refer to the file, ner_finetune_re10-11.json)
     -  Multi-task option setting is possible in the same way. Depending on the loss weight, the weight ratio of each task is different, 
        so the performance is different. In particular, it helps to improve ner performance when running ner and coref at the same time.
+       (refer to training_config/scierc_radam_st_scideberta_re9-ner-1.jsonnet)
  -  B. Optimizer Setting: 
     -  To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
     -  (refer to the file,  scierc_ner_radam.jsonnet)
