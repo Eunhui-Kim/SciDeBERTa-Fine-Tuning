@@ -1,7 +1,7 @@
 
 # SciDeBERTa Fine-Tunining
 This code is for testing SciDeBERTa PLM model usig multi-tasking framework, dygiepp.
-The paper is ![SciDeBERTa:  Learning DeBERTa for Science and Technology Documents and Fine-tuning Information Extraction Tasks] (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9791256)
+The paper is <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9791256">SciDeBERTa:  Learning DeBERTa for Science and Technology Documents and Fine-tuning Information Extraction Tasks</a>
 
 # About Continual Learning of SciDeBERTa Fine-Tuning
 For continual learning of PLM, you could use two kinds of methods.
