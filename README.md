@@ -33,23 +33,23 @@ Note that this code is tested only in the environment decribed below. Mismatched
 # Setting
  1) clone dygiepp github in the local path
  
-   git clone https://github.com/dwadden/dygiepp
+     git clone https://github.com/dwadden/dygiepp
    
  2) create conda environment such as 
 
-   conda create -n create dygiepp python==3.8
+     conda create -n create dygiepp python==3.8
    
  3) activate conda environment 
  
-   conda activate dygiepp
+     conda activate dygiepp
    
  4) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
  
-   pip3 install torch torchvision torchaudio
+     pip3 install torch torchvision torchaudio
    
  5) install requirements in the dygiepp local path 
 
-   pip install -r requirements.txt
+     pip install -r requirements.txt
    
 # Testing BERT model with SciERC dataset 
   -  For Check Setting, you could first download SciERC dataset and test by using default BERT model.  
