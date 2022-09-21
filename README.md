@@ -32,34 +32,38 @@ Note that this code is tested only in the environment decribed below. Mismatched
  
 # Setting
  1) clone dygiepp github in the local path
-    
+```    
      git clone https://github.com/dwadden/dygiepp
-   
+```   
  2) create conda environment such as 
-    
+```    
      conda create -n create dygiepp python==3.8
-   
+```   
  3) activate conda environment 
-      
+```      
      conda activate dygiepp
-   
+```   
  4) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
-     
+```     
      pip3 install torch torchvision torchaudio
-   
+```   
  5) install requirements in the dygiepp local path 
-     
+```     
      pip install -r requirements.txt
-   
+```   
 # Testing BERT model with SciERC dataset 
   -  For Check Setting, you could first download SciERC dataset and test by using default BERT model.  
    To train a model for named entity recognition, relation extraction, and coreference resolution on the SciERC dataset:
 
   -  Download the data. From the top-level folder for this repo, 
-     - sh ./scripts/data/get_scierc.sh. 
+```
+      sh ./scripts/data/get_scierc.sh
+```
    This will download the scierc dataset into a folder ./data/scierc
   - Train the model. 
-     - sh scripts/train.sh scierc
+``` 
+      sh scripts/train.sh scierc
+```
 
 # Testing SciDeBERTa model 
   - You can download SciDeBERTa model from huggingface https://huggingface.co/model/scideberta
@@ -98,8 +102,9 @@ Note that this code is tested only in the environment decribed below. Mismatched
     -  To use optimizer radam, open sicerc.jsonnet in training_config and set optimizer to radam.
     -  (refer to the file,  scierc_ner_radam.jsonnet)
  -  C. RUN
-    -  sh scripts/train.sh scierc    
- 
+ ```
+      sh scripts/train.sh scierc    
+ ```
  
  # Citation
  ``` latex
