@@ -48,6 +48,16 @@ Note that this code is tested only in the environment decribed below. Mismatched
   - Train the model. 
      - enter bash scripts/train.sh scierc
 
+# Testing SciDeBERTa model 
+  - You can download SciDeBERTa model from huggingface https://huggingface.co/model/scideberta
+  - As described in the table and the paper SciDeBERTa, you could use two kinds of model scideberta-abs and scideberta-cs.
+    - (scideberta-abs denotes scideberta model which is continually learned from deberta by s2orc abstracts datasets.)
+    - (scideberta-cs denotes scideberta model which is continually learned from deberta by s2orc computer science datasets.)
+  - To test scideberta model, you can use configuration files such as
+    - training_config/template.deberta.libsonnet
+    - training_config/scierc_radam_st_scideberta_re9-net-1.jsonnet
+    >> This example is the case which you download the configuration files into the local path.
+    >> configuration files : pytorch_model.bin, config.json, tokenizer.json, vocab.json, merges.txt
 # Testing SciDeBERTa model with optimizing fine-tuning option
   1) BackUp the following installed files A(initializers.py) and B(optimizer.py), 
   
