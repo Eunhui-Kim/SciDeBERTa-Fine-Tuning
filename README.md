@@ -58,8 +58,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
   2) Substitute following files.
     A. Substitute A(initilizers.py) file with patch_code/initializers.py 
     
-      >> According to the model for Bert, Roberta, Deberta,  
-         you can select initializers.py such as initializers_re1011_bert.py, initializers_re1011_roberta.py, initializers_re1011_deberta.py, respectively. 
+      >> you can select initializers.py as initializers_re1011_bert.py, initializers_re1011_roberta.py, and initializers_re1011_deberta.py according to the model  Bert, Roberta, and Deberta, respectively. 
          
     B. Substitute B(optimizers.py) file with patch_code/optimizers.py
     
