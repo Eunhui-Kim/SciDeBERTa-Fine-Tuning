@@ -31,23 +31,23 @@ Note that this code is tested only in the environment decribed below. Mismatched
  - allennlp.__version__ '1.1.0'
  
 # Setting
- - clone dygiepp github in the local path
+ 1) clone dygiepp github in the local path
  
    git clone https://github.com/dwadden/dygiepp
    
- - create conda environment such as 
+ 2) create conda environment such as 
 
    conda create -n create dygiepp python==3.8
    
- - activate conda environment 
+ 3) activate conda environment 
  
    conda activate dygiepp
    
- - install <a href="https://pytorch.org/get-started/locally/">torch</a> 
+ 4) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
  
    pip3 install torch torchvision torchaudio
    
- - install requirements in the dygiepp local path 
+ 5) install requirements in the dygiepp local path 
 
    pip install -r requirements.txt
    
