@@ -46,7 +46,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
      - enter bash ./scripts/data/get_scierc.sh. 
    This will download the scierc dataset into a folder ./data/scierc
   - Train the model. 
-     - enter bash scripts/train.sh scierc.
+     - enter bash scripts/train.sh scierc
 
 # Testing SciDeBERTa model with optimizing fine-tuning option
   1) BackUp the following installed files A(initializers.py) and B(optimizer.py), 
