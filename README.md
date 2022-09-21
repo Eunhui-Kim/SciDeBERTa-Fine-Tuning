@@ -5,14 +5,16 @@ The paper is <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=97912
 
 # About Continual Learning of SciDeBERTa Fine-Tuning
 For continual learning of PLM, you could use two kinds of methods.
-1. you could use hugging face library. - Pretrain Transformers Models in PyTorch Using Hugging Face Transformers (https://www.topbots.com/pretrain-transformers-models-in-pytorch/)
-2. If you want to use deberta, you could use deberta code which is open. They also open MLM(masked langauge model) example, too.
- (https://github.com/microsoft/DeBERTa)
+1. you could use hugging face library. - <a href="https://www.topbots.com/pretrain-transformers-models-in-pytorch/">Pretrain Transformers Models in PyTorch Using Hugging Face Transformers</a>
+2. If you want to use deberta, you could use <a href="https://github.com/microsoft/DeBERTa">deberta code</a> which is open. They also open MLM(masked langauge model) example, too.
 
 # introduction
 This repository is related with the paper SciDeBERTa.
 The main idea of optimizing fine-tuning is
+
  1. Overfitting mitigation: In order to alleviate the overfitting problem that occurs when the fine-tuning training dataset is small (less than 10,000 examples) when training the fine-tuning task, the upper layer of the training model is reconstructed as a general xavier Gaussian rather than a pre-learning parameter. Initialization is performed. In the case of the SciERC dataset tested in the paper, the learning performance was improved through re-initialization.
+
+
  2. Optimizer selection: This program includes the latest and best performing optimization algorithms RAdam and AdamP. For reference, as the optimization algorithm provided by AllenNLP, the algorithm that has been confirmed to have the best performance is AdamW. This is one of the algorithms that improved the performance since Adam. After Adam, in addition to AdamW, RAdam and AdamP show improved performance similar to AdamW. In particular, in the case of RAdam, it shows improved performance without configuring a separate warmup scheduler. Through the experiment, it was possible to confirm the improved performance of RAdam compared to AdamW on the SciERC dataset.
  
 # our experimental Results for SciDeBERTa
