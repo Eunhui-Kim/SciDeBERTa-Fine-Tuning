@@ -56,10 +56,10 @@ Note that this code is tested only in the environment decribed below. Mismatched
    To train a model for named entity recognition, relation extraction, and coreference resolution on the SciERC dataset:
 
   -  Download the data. From the top-level folder for this repo, 
-     - enter bash ./scripts/data/get_scierc.sh. 
+     - sh ./scripts/data/get_scierc.sh. 
    This will download the scierc dataset into a folder ./data/scierc
   - Train the model. 
-     - enter bash scripts/train.sh scierc
+     - sh scripts/train.sh scierc
 
 # Testing SciDeBERTa model 
   - You can download SciDeBERTa model from huggingface https://huggingface.co/model/scideberta
