@@ -1,5 +1,5 @@
 
-# SciDeBERTa Fine-Tunining
+# SciDeBERTa Fine-Tuning
 This code is for testing SciDeBERTa PLM model usig multi-tasking framework, dygiepp.
 The paper is <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9791256">SciDeBERTa:  Learning DeBERTa for Science and Technology Documents and Fine-tuning Information Extraction Tasks</a>
 
