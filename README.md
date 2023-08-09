@@ -37,7 +37,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
 ```   
  2) create conda environment such as 
 ```    
-     conda create -n create dygiepp python==3.8
+     conda create -n dygiepp python==3.8
 ```   
  3) activate conda environment 
 ```      
