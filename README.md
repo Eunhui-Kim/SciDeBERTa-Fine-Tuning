@@ -43,14 +43,14 @@ Note that this code is tested only in the environment decribed below. Mismatched
 ```      
      conda activate dygiepp
 ```   
- 4) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
-```     
-     pip install torch==1.12.0+cu102 torchvision==0.13.0+cu102 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu102
-```   
- 5) install requirements in the dygiepp local path 
+ 4) install requirements in the dygiepp local path 
 ```     
      pip install -r requirements.txt
-```   
+```
+ 5) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
+```     
+     pip install torch==1.12.0+cu102 torchvision==0.13.0+cu102 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu102
+```     
 # Testing BERT model with SciERC dataset 
   -  For Check Setting, you could first download SciERC dataset and test by using default BERT model.  
    To train a model for named entity recognition, relation extraction, and coreference resolution on the SciERC dataset:
@@ -58,7 +58,11 @@ Note that this code is tested only in the environment decribed below. Mismatched
   -  Download the data. From the top-level folder for this repo, 
 ```
       sh ./scripts/data/get_scierc.sh
+      if you meet module not found error, then you could solve the problem with below method.
+      step1 add the current path with cmd : SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+      step2 execute the python execution with following cmd :  PYTHONPATH="${PYTHONPATH}:${SCRIPT_DIR}/dygie" python scripts/data/shared/normalize.py
 ```
+    
    This will download the scierc dataset into a folder ./data/scierc
   - Train the model. 
 ``` 
