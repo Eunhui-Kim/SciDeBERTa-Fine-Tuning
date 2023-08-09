@@ -45,7 +45,7 @@ Note that this code is tested only in the environment decribed below. Mismatched
 ```   
  4) install <a href="https://pytorch.org/get-started/locally/">torch</a> 
 ```     
-     pip3 install torch torchvision torchaudio
+     pip install torch==1.12.0+cu102 torchvision==0.13.0+cu102 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu102
 ```   
  5) install requirements in the dygiepp local path 
 ```     
